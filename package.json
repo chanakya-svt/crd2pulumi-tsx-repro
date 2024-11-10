@@ -1,0 +1,45 @@
+{
+  "name": "svt-azure-iac",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "engines": {
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "node": ">=20.14.0",
+    "pnpm": ">=9.0.4"
+  },
+  "dependencies": {
+    "@pulumi/azure-native": "^2.67.0",
+    "@pulumi/command": "^1.0.1",
+    "@pulumi/kubernetes": "^4.18.2",
+    "@pulumi/null": "^0.0.4",
+    "@pulumi/pulumi": "^3.137.0",
+    "@pulumi/random": "^4.16.7",
+    "axios": "^1.6.0",
+    "tslib": "^2.8.0",
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "@nx/esbuild": "20.0.3",
+    "@nx/eslint": "20.0.3",
+    "@nx/eslint-plugin": "20.0.3",
+    "@nx/js": "20.0.3",
+    "@nx/node": "20.0.3",
+    "@nx/workspace": "20.0.3",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "@types/node": "~18.16.9",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "esbuild": "^0.19.2",
+    "eslint": "~8.57.0",
+    "eslint-config-prettier": "^9.0.0",
+    "nx": "20.0.3",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

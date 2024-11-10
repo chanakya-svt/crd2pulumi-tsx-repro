@@ -1,0 +1,63 @@
+{
+  "name": "crds",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/crds/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "development",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/crds",
+        "format": [
+          "esm"
+        ],
+        "bundle": true,
+        "main": "apps/crds/index.ts",
+        "tsConfig": "apps/crds/tsconfig.app.json",
+        "assets": [],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".mjs"
+          }
+        }
+      }
+    },
+    "serve-tsx": {
+      "dependsOn": [],
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsx --no-warnings --no-cache --enable-source-maps --tsconfig /Volumes/cpallapolu/svtr/misc/crd2pulumi-tsx-repro/apps/crds/tsconfig.app.json /Volumes/cpallapolu/svtr/misc/crd2pulumi-tsx-repro/apps/crds/index.ts"
+        ],
+        "parallel": false
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": [
+        "build"
+      ],
+      "options": {
+        "buildTarget": "crds:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "crds:build:development"
+        },
+        "production": {
+          "buildTarget": "crds:build:production"
+        }
+      }
+    }
+  }
+}
