@@ -1,5 +1,5 @@
 {
-  "name": "svt-azure-iac",
+  "name": "crd2pulumi-tsx-repro",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {},
@@ -11,20 +11,11 @@
     "pnpm": ">=9.0.4"
   },
   "dependencies": {
-    "@pulumi/azure-native": "^2.71.0",
-    "@pulumi/command": "^1.0.1",
-    "@pulumi/kubernetes": "^4.18.3",
-    "@pulumi/null": "^0.0.4",
     "@pulumi/pulumi": "^3.138.0",
-    "@pulumi/random": "^4.16.7",
-    "axios": "^1.7.7",
-    "tslib": "^2.8.1",
     "tsx": "^4.19.2"
   },
   "devDependencies": {
     "@nx/esbuild": "20.0.3",
-    "@nx/eslint": "20.0.3",
-    "@nx/eslint-plugin": "20.0.3",
     "@nx/js": "20.0.3",
     "@nx/node": "20.0.3",
     "@nx/workspace": "20.0.3",
@@ -32,14 +23,8 @@
     "@swc/core": "~1.5.29",
     "@swc/helpers": "~0.5.13",
     "@types/node": "~18.16.20",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "esbuild": "^0.19.12",
-    "eslint": "~8.57.1",
-    "eslint-config-prettier": "^9.1.0",
     "nx": "20.0.3",
     "prettier": "^2.8.8",
-    "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
 }
